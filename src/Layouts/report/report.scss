@@ -1,0 +1,467 @@
+//------------FONTS DECLARATION-------------------------------------
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: local('OpenSans-Bold'), url(../../assets/fonts/OpenSans-Bold.ttf) format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: local('OpenSans-Semibold'), url(../../assets/fonts/OpenSans-Semibold.ttf) format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: local('OpenSans-Light'), url(../../assets/fonts/OpenSans-Light.ttf) format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'PlayfairDisplay-ExtraBold';
+  src: local('PlayfairDisplay-ExtraBold'), url(../../assets/fonts/PlayfairDisplay-ExtraBold.ttf) format('truetype');
+  //font-weight: bolder;
+}
+//------------END FONT DECLARATION----------------------------------
+
+
+
+.report {
+  padding: 24px 22px;
+  background: #fff;
+//------------Start Home Page Style-------------------------------------
+  .home-page{
+    height: 880px;
+    padding: 12px;
+    justify-content: space-between;
+    display: flex;
+    color: #2e3030;
+    .left-side{
+      height: 100%;
+      width: 45%;
+  
+      .img-container{
+        background-image: url(../../assets/img/home-bg-left.jpg);
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+        background-size: cover;
+        height: 55%;
+        width: 100%;
+        background-position: left top;
+      }
+      .logo{
+        height: 60px;
+        width: 60px;
+        margin: 11.5em auto 40px auto;
+
+      }
+      .contact{
+        display: flex;
+        justify-content: space-around;
+        ul{
+          font-family: "OpenSans-Semibold";
+          font-size: 13px;
+          li:first-child {
+              margin-top: 6px;
+            }
+          li{
+            display: flex;
+            justify-content: space-between;
+            width: 240px;
+            font-family: "OpenSans-Light";
+            p{
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    .right-side{
+
+      height: 100%;
+      width: 45%;
+      text-align: center;
+      .img-container{
+        background-image: url(../../assets/img/home-bg-right.jpg);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        transform: scaleX(-1);
+        background-position: center;
+      }
+      .content{
+        text-align: center;
+        position: relative;
+        top: -83%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+          height: 120px;
+          width: 120px;
+          margin-bottom: 1.3em;
+        }
+        h1{
+          margin-bottom: 14px;
+          font-family: "PlayfairDisplay-ExtraBold";
+          font-size: 28px;
+          width: 100%;
+        }
+        p{
+          width: 68%;
+          margin-bottom: 4em;
+          font-family: "OpenSans-Light";
+          font-size: 18px;
+        }
+        h2{
+          margin-bottom: 5.6em;
+          margin-top: 10em;
+          font-family: "OpenSans-Bold";
+          font-size: 18px;
+        }
+        a{
+          font-family: "OpenSans-Light";
+          font-size: 13px;
+        }
+      }
+    }
+  }
+//------------End Home Page Style-------------------------------------
+
+
+
+
+  .wordCloudWrapper {
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+    // svg {
+    //   margin-left: -30px;
+    // }
+  }
+  .Wordcloud {
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 15px;
+    min-height: 350px;
+
+    .btn-title {
+      min-height: 29px;
+      height: 29px;
+      background: #fff;
+      color: #2e3030;
+      font-size: 20px;
+      font-family: "OpenSans-Bold";
+      text-transform: capitalize;
+      //padding-left: 45px;
+      padding-right: 45px;
+      box-shadow: none;
+      font-weight: bold;
+      border-bottom: 0.25px solid black;
+      border-radius: 0;
+      width: 100%;
+      
+      .MuiFab-label{
+        justify-content: left;
+
+      }
+    }
+    .section {
+      max-width: 60%;
+      margin: 0 auto;
+      .top {
+        h4 {
+          font-size: 25.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          line-height: 80%;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-size: 31.33px;
+          text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+          text-align: right;
+          line-height: 80%;
+          margin-bottom: 10px;
+        }
+      }
+      .bottom {
+        h4 {
+          font-size: 24.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          line-height: 80%;
+          margin-bottom: 5px;
+        }
+        h3 {
+          font-size: 30.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+          line-height: 80%;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .disturbances {
+    @extend .Wordcloud;
+    .MuiFab-root {
+      box-shadow: none;
+    }
+
+    .list {
+      li {
+        //margin-bottom: 18px;
+        margin-bottom: 14px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .text {
+          font-size: 20px;
+          color: #2e302f;
+          font-family: "OpenSans-Light";
+          font-weight: bold;
+        }
+        button {
+          height: 28px; //28
+          min-height: 28px;
+          font-size: 20px;
+          font-weight: bold;
+          font-family: "OpenSans-Semibold";
+          padding: 6px 12px;
+          min-width: 92px;
+          justify-content: space-between;
+
+          .not-italic {
+            font-size: 12px;
+            line-height: 22px;
+            margin-top: 0.4rem;
+            //margin-left: 5px;
+            text-transform: lowercase;
+          }
+        }
+        .btn-interference {
+          background-color: #4cc9f0;
+          color: #fff;
+        }
+        .btn-breathing {
+          background-color: #7209b7;
+          color: #fff;
+        }
+        .btn-silences {
+          background-color: #f72585;
+          color: #fff;
+        }
+        .btn-speaking {
+          @extend .btn-silences;
+          background-color: #2f3031;
+        }
+        .btn-total {
+          color: #2f3031;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .speed {
+    @extend .disturbances;
+    .list {
+      li {
+        margin-bottom: 0;
+        text-align: center;
+        max-width: 104px;
+        & + li {
+          margin-left: 10px;
+        }
+        .btn-median {
+          background-color: transparent;
+          box-shadow: none;
+          color: #2f3031;
+          border: 2px dashed #f91b84;
+          height: 28px;
+          min-height: 28px;
+        }
+        .btn-interference {
+          color: #fff;
+        }
+        .text {
+          font-family: "OpenSans-Light";
+          font-size: 16px;
+          display: none;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .emotions {
+    @extend .disturbances;
+    .main-img {
+      position: absolute;
+      top: 51.7%;
+      left: 48.7%;
+      height: 70px;
+      width: 70px;
+      transform: translate(-50%, -50%);
+    }
+    .custom-label {
+      background-color: #3b3c3d;
+      height: 30px;
+      //height: 16px;
+      //min-width: 147.95px;
+      border-radius: 20px;
+      position: relative;
+      padding: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .top-label {
+        background-color: #bbbdc0;
+        color: #2e302f;
+        font-family: "OpenSans-Light";
+        position: absolute;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        //width: 64.23px;
+        //height: 16px;
+        top: 0;
+        border-radius: 20px;
+        line-height: 2.5;
+        font-size: 10.66px;
+        font-weight: bold;
+        text-align: center;
+        img {
+          height: 30px;
+        }
+      }
+      &.left-side {
+        transform: scaleX(-1);
+        .top-label {
+          transform: scaleX(-1);
+          img {
+            float: right;
+          }
+        }
+        .text {
+          transform: scaleX(-1);
+        }
+      }
+      .text {
+        //font-size: 12px;
+        font-size: 10.66px;
+        font-family: "OpenSans-Semibold";
+      }
+    }
+  }
+  .p-distribution {
+    @extend .emotions;
+    .btn-custom {
+      background-color: #f72585;
+      color: #fff;
+      padding-left: 6px;
+      padding-right: 6px;
+      height: 28px;
+      width: 90px;
+      font-size: 20px;
+      font-family: "OpenSans-Semibold";
+      position: absolute;
+      right: 0;
+      bottom: 53px;
+      .not-italic {
+        font-size: 12px;
+        margin-top: 0.4rem;
+        margin-left: 5px;
+        text-transform: uppercase;
+      }
+    }
+    .top-line {
+      width: 1px;
+      height: 80%;
+      position: absolute;
+      border-left: 3px dashed #f72585;
+      top: 18px;
+      left: 49.7%;
+      &::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: #f72585;
+        margin-left: -7.5px;
+        border: 2px solid #232424;
+        margin-top: -2px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: #f72585;
+        margin-left: -7.5px;
+        position: absolute;
+        bottom: -2px;
+        border: 2px solid #232424;
+      }
+    }
+  }
+  .recharts-wrapper {
+    margin: auto;
+  }
+  .apexcharts-canvas {
+    margin: auto;
+  }
+  .speedometer {
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .emotion-bottom {
+    margin-top: 25px;
+    .text {
+      h3 {
+        font-size: 27px;
+        font-family: "OpenSans-Light";
+      }
+    }
+    .timer {
+      font-size: 27px;
+      font-family: "OpenSans-Light";
+    }
+    .buttons {
+      button {
+        background-color: #232424;
+        border-radius: 7px;
+        min-height: 30px;
+        height: 30px;
+        img {
+          height: 15px;
+          margin-right: 7px;
+        }
+        & + button {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+.pl-fab-2 {
+  padding-left: 18px !important;
+}
+
+.current-value {
+  display: none;
+}
+
+.wordcloudComponent {
+  display: flex;
+  justify-content: center;
+}
+
+.with-buttons .MuiFab-label > span {
+  margin-right: 10px;
+
+}

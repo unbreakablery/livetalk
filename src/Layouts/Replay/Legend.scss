@@ -1,0 +1,37 @@
+.legend-wrapper {
+    div {
+        height: 30px;
+        border-radius: 20px 20px 0 0;
+        padding: 5px 21px;
+        background-color: #2f3031;
+        text-transform: none;
+        color: #fff;
+        font-family: "OpenSans-Light";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        display: inline-block;
+    }
+    .legend-item {
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .legend-color {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+    }
+    .special {
+        height: 29px;
+        font-size: 21px;
+        color: #151616;
+        border-radius: 20px 20px 0 0;
+        padding: 5px 10px;
+        background-color: #4CC9F0;
+        margin-left: 4px;
+        display: inline-block;
+        text-align: center;
+        line-height: 19px;
+    }
+}

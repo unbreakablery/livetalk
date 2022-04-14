@@ -1,0 +1,32 @@
+.footer-wrapper {
+    padding: 0px 50px;
+    position: absolute;
+    width: 100%;
+    // bottom: -40px;
+    footer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    button {
+        color: #fff;
+        font-family: "OpenSans-light";
+        background-color: #232424;
+        border-radius: 7px;
+        width: 83px;
+        text-align: center;
+        height: 30px;
+    }
+    .duration {
+        color: #fff;
+        font-family: "OpenSans-light";
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 37px;
+        text-align: center;
+    }
+}

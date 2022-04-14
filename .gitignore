@@ -1,0 +1,7 @@
+node_modules
+api.json
+test.js
+test.json
+.vscode
+todo
+.git_*

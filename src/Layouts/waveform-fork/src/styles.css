@@ -1,0 +1,12 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.placeholder {
+  position: absolute;
+  width: 100%;
+  font-size: 3em;
+  font-family: "OpenSans-Light";
+  z-index: 999;
+}

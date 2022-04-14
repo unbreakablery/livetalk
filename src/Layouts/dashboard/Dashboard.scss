@@ -1,0 +1,368 @@
+.dashboard-page {
+    height: 100vh;
+    width: 100vw;
+}
+.emotions {
+    padding-bottom: 25px;
+    padding-top: 25px;
+    height: 100%;
+    .float-right {
+        box-shadow: none;
+    }
+    .emotions-cam {
+        & > div {
+            border-radius: 31px;
+        }
+        .emotions-meter-wrapper {
+            height: calc(100% - 50px);
+        }
+    }
+    .emotions-box {
+        padding: 15px 27px 26px;
+        height: calc(50% - 10px);
+    }
+    & .emotions-bubbles {
+        margin-top: -10px;
+    }
+    & .rounded-3xl {
+        height: 30px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-family: "OpenSans-Light";
+        background: #2f3031;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        width: 154px;
+        box-shadow: none;
+        &.bottom-tag {
+            width: 100%;
+            height: 33px;
+            vertical-align: middle;
+            font-family: "OpenSans-light";
+            font-size: 16px;
+            color: #fff;
+            margin-top: -32px !important;
+            line-height: 33px;
+        }
+    }
+    & .rounded-3xl.px-8 {
+        min-width: 100px;
+    }
+    & .btn-bottom-bubbles {
+        margin-top: -10px;
+    }
+    & .bg-bubble {
+        background-color: #4cc9f0;
+    }
+    .video-container {
+        height: calc(50% + 10px);
+        video {
+            border-radius: 31px;
+            width: 100%;
+            // height: 100%;
+            object-fit: fill;
+            position: absolute;
+            // z-index: 88;
+        }
+        .btn-f-track {
+            button {
+                position: absolute;
+                left: 50%;
+                top: 30px;
+                transform: translateX(-50%);
+            }
+            // .MuiFab-root {
+            //     background-color: #2f3031 !important;
+            //     // display: flex;
+            //     // align-items: flex-end;
+            //     // font-size: 20px;
+            //     // padding: 0 15px;
+            //     // margin-right: 10px;
+            // }
+        }
+        .bottom-tag {
+            position: absolute;
+            margin-top: -23px;
+            z-index: 999;
+        }
+    }
+    .v-chat {
+        @extend .video-container;
+        .btn-f-track {
+            button {
+                top: 4px;
+            }
+        }
+
+        .btn-feq {
+            background: #2f3031;
+            display: flex;
+            align-items: flex-end;
+            font-size: 20px;
+            padding: 0 15px;
+            margin-right: 10px;
+            text-transform: capitalize;
+            i {
+                font-size: 12px;
+                font-style: normal;
+                margin-left: 8px;
+                transform: translate(0px, -4px);
+            }
+        }
+    }
+    .wave-f {
+        // overflow: hidden;
+        position: relative;
+        border-right: 12px solid #232424;
+        @extend .v-chat;
+        .indecater {
+            padding-left: 18px;
+            li {
+                color: #fff;
+                font-size: 12px;
+                font-family: "OpenSans-Light";
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                span {
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 10px;
+                }
+                .bg-interference {
+                    background-color: #f72585;
+                }
+                .bg-breathing {
+                    background-color: #7209b7;
+                }
+                .bg-silences {
+                    background-color: #4cc9f0;
+                }
+                .bg-speaking {
+                    background-color: #3b3c3d;
+                }
+            }
+        }
+        .wave {
+            width: 4px;
+            background-color: #3b3c3d;
+            // align-self: center;
+            // float: left;
+            position: relative;
+            border-radius: 7px;
+            // top: 50%;
+            // transform: translateY(-50%);
+            position: relative;
+            left: 0100%;
+            & + .wave {
+                margin-left: 6px;
+            }
+        }
+    }
+    .action-buttons {
+        position: absolute;
+        right: 0;
+        z-index: 99;
+        .MuiButton-root {
+            background: #2f3031;
+            color: #fff;
+            text-transform: capitalize;
+            padding: 0px 10px;
+            min-height: 24px;
+            font-family: "OpenSans-Light";
+            & + .MuiButton-root {
+                margin-left: 10px;
+            }
+        }
+    }
+    .bottom {
+        min-height: 30px;
+        margin-top: 25px;
+        .title {
+            font-size: 27px;
+            font-family: "OpenSans-Light";
+            color: #fff;
+        }
+        .timer {
+            @extend .title;
+            text-align: center;
+        }
+    }
+}
+.height-400 {
+    height: 400px;
+}
+
+// .dot {
+//   position: absolute;
+//   width: 5px;
+//   height: 5px;
+//   background: #dadada;
+//   border-radius: 50%;
+//   z-index: 99;
+// }
+
+#cam-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 31px;
+    canvas {
+        position: relative;
+        z-index: 99;
+    }
+}
+
+#cam-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.waves-wrapper {
+    height: calc(100% - 130px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.waves-speed {
+    display: flex;
+    flex-direction: row;
+    padding-right: 34px;
+    border-radius: 31px;
+    .waves-speed-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .line {
+        height: calc(100% - 36px);
+        border: 1px solid #4cc9f0;
+        position: relative;
+        bottom: 0.7rem;
+        left: -12px;
+    }
+}
+
+.bg-lines-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    // left: -6px;
+    bottom: 1px;
+    .bg-lines:first-child {
+        opacity: 0;
+    }
+    .bg-lines {
+        border-left: 1px solid #6b6c6d;
+        height: 100%;
+        width: 0;
+        opacity: 0.1;
+    }
+}
+
+.emotions-grid {
+    height: calc(100% - 65px);
+    display: flex;
+    .emotions-cam {
+        margin-right: 10px;
+        width: 50%;
+    }
+    .waves-speed {
+        margin-left: 10px;
+        width: 50%;
+    }
+}
+
+.btn-f-track {
+    .MuiFab-root {
+        background-color: #2f3031 !important;
+        color: #fff;
+        font-size: 27px;
+        font-family: "OpenSans-light";
+        display: flex;
+        align-items: baseline;
+        box-shadow: none;
+        .unit {
+            font-size: 16px;
+            text-transform: lowercase;
+            margin-left: 10px;
+        }
+    }
+}
+
+.speed-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    position: relative;
+}
+
+.wave-labels {
+    display: flex;
+    justify-content: space-between;
+    .MuiFab-root {
+        background-color: #2f3031 !important;
+        color: #fff;
+        font-size: 27px;
+        font-family: "OpenSans-light";
+        display: flex;
+        align-items: baseline;
+        box-shadow: none;
+        margin-right: -15px;
+        position: relative;
+        z-index: 99;
+        .unit {
+            font-size: 16px;
+            text-transform: capitalize;
+            margin-left: 10px;
+        }
+    }
+}
+
+.MuiFab-label {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1800px) {
+    .h-28.w-28.flex.items-center,
+    .h-24.w-28.flex.items-center {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .emotions-cam.text-center.mb-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    .emotions .wave-f .wave {
+        width: 2px;
+        transform: scaleY(0.5);
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .waves-speed .line {
+        height: calc(100% - 30px);
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .lg-none {
+        margin: 0 !important;
+    }
+}
+
+#realtime-speed-chart .apexcharts-xaxis {
+    display: none;
+}

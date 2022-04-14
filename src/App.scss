@@ -1,0 +1,361 @@
+$primary : #151616;
+$secondary : #fff;
+$default:#2F3031;
+.bg-primary{
+    background-color: $primary;
+}
+.bg-dark{background-color: #232424;}
+@mixin media ($width) {
+    @media screen and (max-width:$width){
+        @content;
+    }
+}
+@mixin flex($align,$justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify
+};
+@mixin custom-scroll-bar() {
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: 10px;
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $default;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+  
+$open-sans-font-path: "assets/fonts/";
+@font-face {
+    src: url("#{$open-sans-font-path}OpenSans-Regular.ttf");
+    font-family: "Open Sans";
+}
+@font-face {
+    src: url("#{$open-sans-font-path}OpenSans-Light.ttf");
+    font-family: "OpenSans-Light";
+}
+
+
+button{
+    outline: none !important;
+}
+button:focus{
+    overflow: none !important;
+}
+body{
+    font-size: 14px;
+    background-color: #151616;
+    color:$secondary;
+    font-family: "OpenSans-Light";
+}
+//Home Page
+.main-wrapper{
+    position: relative;
+    height: 100vh;
+    .logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 167px;
+        margin-top: 30px;
+    }
+    .left{
+    background-color: $primary; 
+    @include flex(center,center);
+    text-align: center;
+    .btn{
+    font-size: 27px;
+    text-transform: capitalize;
+    font-family: "OpenSans-Light";
+    img{
+        width: 22px;
+    }
+    }
+    .inner{
+        p{
+            font-size: 14px;
+            font-family: "OpenSans-Light";
+        }
+    }
+    }
+    .right{
+        background-color: $secondary; 
+        @include flex(center,center);
+        text-align: center;
+        .btn{
+        font-size: 27px;
+        text-transform: capitalize;
+        font-family: "OpenSans-Light";
+        min-width: 260px;
+        padding-left: 0;
+        img{
+            width: 22px;
+        }
+        }
+    .inner{
+        p{
+            font-size: 14px;
+            font-family: "OpenSans-Light";
+        }
+    }
+    }
+}
+.expire-alert{
+    position: fixed;
+    width:25%;
+    left: calc(50% - 12.5%);
+    top:7px
+}
+// Sminar list Page
+.start-now{
+    background-color: $primary;
+    height: 100vh;
+    .table-head{
+        background-color: #232424;
+    }
+    .MuiTableCell-stickyHeader {
+        background-color: #232424;
+    }
+    .btn-download{
+        background-color: #2F3031;
+        color:#fff;
+        font-size:16px;
+        height:29px;
+        text-transform: capitalize;
+        font-family: "OpenSans-Light";
+    }
+    .file-upload{
+        display: none;
+    }
+    .MuiTableContainer-root{
+    max-height: 300px;
+    position: relative;
+    overflow: auto;
+    @include custom-scroll-bar();
+    .detail-data{
+        background-color: $default;
+    }
+    .selected-row {
+        background-color: #C8C8C8;
+    }
+    .btn-del{
+        padding: 3px;
+        min-width: 0;
+        background-color: $default;
+        font-size: 12px;
+        text-transform: capitalize;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+        transform: translateY(-3px);
+    }
+    .btn-pre{
+        padding: 3px;
+        min-width: 0;
+        font-size: 12px;
+        text-transform: capitalize;
+        height: auto; 
+        margin-left: 9px;
+        padding-right: 10px;
+        transform: translateY(-3px);
+    }
+    }
+    .button-bottom{
+        position: relative;
+    .btn-start-now{
+        background-color: $default;
+        text-transform: capitalize;
+        font-family: "OpenSans-Light";
+        color:$secondary;
+        font-size: 27px;
+
+    }
+    &::before{
+        content:'';
+        display:block;
+        height: 18.44px;
+        background-color: $default;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+.down-arrow{
+    width:29.97px;
+    height:29.97px;
+    background-color: $default;
+    border-radius: 7px;
+    padding: 0;
+    min-width: 0;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+}
+.table-main .MuiTableCell-root, .MuiTableCell-head{
+    font-family: "OpenSans-Light";
+}
+.table-main.text-dark .MuiTableCell-root{
+    color:#000!important
+}
+
+// Form page 
+
+.form {
+    background-color: #151616;
+}
+.inputborder .MuiInput-underline::before {
+    border-bottom: none;
+}
+.inputborder {
+    width: 90%;
+}
+.button-bottom-form{
+    position: relative;
+.btn-start-now{
+    background-color: $default;
+    text-transform: capitalize;
+    font-family: "OpenSans-Light";
+    color:$secondary;
+    font-size: 27px;
+
+}
+&::before{
+    content:'';
+    display:block;
+    height: 2.44px;
+    background-color: $default;
+    width: 100%;
+    top: 0;
+    margin-bottom: 50px;
+}
+.MuiLink-underlineHover {
+    text-decoration: none;
+}
+}
+.log-section {
+    & .MuiOutlinedInput-root {
+        & fieldset {
+          border-radius: 0;
+          border-color:#2F3031;
+        };
+        &:hover fieldset {
+            border-radius: 0;
+            border-color:#2F3031;
+        };
+        &.Mui-focused fieldset {
+            border-radius: 0;
+            border-color:#2F3031;
+        };
+      };
+  }
+  .fontFamily {
+    font-family: "OpenSans-Light";
+  }
+  
+.form-checkbox .MuiFormControlLabel-root{
+    margin-left: 0px;
+    margin-right: 20px;
+    & .MuiTypography-root{
+        font-size: 12px;
+    font-family: "OpenSans-Light";
+    }
+    & svg {
+        color: #fff;
+    }
+}
+.progress .MuiCircularProgress-root{
+    width: 153px!important;
+    height: 153px!important;
+    color:#fff;
+    border-radius: 50px;
+    stroke-linecap: round;
+}
+.font-regular{
+    font-weight: 600;
+}
+
+// List page
+.list-page{
+    // background-image: linear-gradient(180deg,rgba(0,0,0,.4),rgba(0,0,0,.4)),url('../src//assets/img/bg-img.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .down-arrow{
+        width:29.97px;
+        height:29.97px;
+        background-color: $default;
+        border-radius: 7px;
+        padding: 0;
+        min-width: 0;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .btn-start-now{
+        background-color: $default;
+        text-transform: capitalize;
+        font-family: "OpenSans-Light";
+        color:$secondary;
+        font-size: 27px;
+    }
+.list {
+    & .MuiTypography-body1 {
+    font-family: "OpenSans-Light";
+    font-size: 27px;
+    }
+    & .MuiListItem-root {
+        border-radius: 30px;
+        &.active{
+         background-color:rgba(183, 183, 183, 0.17);
+        }
+    }
+    & .MuiListItem-root:hover {
+        background-color: rgba(183,183,183,0.17);
+    }
+    & .span {
+        font-family: "OpenSans-Light";
+        font-size: 27px;
+        color: #fff;
+    }
+}
+.button-bottom-list{
+    position: relative;
+    .btn-start-now{
+        background-color: $default;
+        text-transform: capitalize;
+        font-family: "OpenSans-Light";
+        color:$secondary;
+        font-size: 27px;
+    }
+    .MuiLink-underlineHover {
+    text-decoration: none;
+}
+}
+
+.apexcharts-yaxis-texts-g{
+    background-color: red;
+}
+.emotions{
+    height: 100%;
+}
+.list-wrapper{
+    overflow: auto;
+    margin-top: 48px;
+    max-height: 400px;
+    padding: 16px 24px;
+    border-radius: 31px;
+    margin-bottom: 48px;
+    background-color: rgba(0, 0, 0, 0.21);
+    @include custom-scroll-bar();
+}
+}

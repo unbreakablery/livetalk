@@ -1,0 +1,304 @@
+.feedback {
+  padding: 24px 22px;
+  .wordCloudWrapper {
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+    // svg {
+    //   margin-left: -30px;
+    // }
+  }
+  .Wordcloud {
+    position: relative;
+    background-color: #232424;
+    border-radius: 30px;
+    padding: 15px;
+    min-height: 350px;
+    .btn-title {
+      min-height: 29px;
+      height: 29px;
+      background: #2f3031;
+      color: #fff;
+      font-size: 16px;
+      font-family: "OpenSans-Light";
+      text-transform: capitalize;
+      padding-left: 45px;
+      padding-right: 45px;
+      box-shadow: none;
+    }
+    .section {
+      max-width: 60%;
+      margin: 0 auto;
+      .top {
+        h4 {
+          font-size: 25.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          line-height: 80%;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-size: 31.33px;
+          text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+          text-align: right;
+          line-height: 80%;
+          margin-bottom: 10px;
+        }
+      }
+      .bottom {
+        h4 {
+          font-size: 24.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          line-height: 80%;
+          margin-bottom: 5px;
+        }
+        h3 {
+          font-size: 30.33px;
+          text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+          line-height: 80%;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .disturbances {
+    @extend .Wordcloud;
+    .MuiFab-root {
+      box-shadow: none;
+    }
+
+    .list {
+      li {
+        margin-bottom: 18px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .text {
+          font-size: 21px;
+        }
+        button {
+          height: 40px;
+          min-height: 40px;
+          font-size: 24px;
+          font-family: "OpenSans-Light";
+          padding: 6px 12px;
+          min-width: 102px;
+          justify-content: space-between;
+          .not-italic {
+            font-size: 16px;
+            line-height: 22px;
+            margin-top: 0.4rem;
+            // margin-left: 5px;
+            text-transform: lowercase;
+          }
+        }
+        .btn-interference {
+          background-color: #4cc9f0;
+        }
+        .btn-breathing {
+          background-color: #7209b7;
+          color: #fff;
+        }
+        .btn-silences {
+          background-color: #f72585;
+          color: #fff;
+        }
+        .btn-speaking {
+          @extend .btn-silences;
+          background-color: #2f3031;
+        }
+        .btn-total {
+          color: #fff;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .speed {
+    @extend .disturbances;
+    .list {
+      li {
+        margin-bottom: 0;
+        text-align: center;
+        max-width: 104px;
+        & + li {
+          margin-left: 10px;
+        }
+        .btn-median {
+          background-color: transparent;
+          box-shadow: none;
+          color: #fff;
+          border: 1.5px dashed #fff;
+          height: 40px;
+          min-height: 33.5px;
+        }
+        .text {
+          font-family: "OpenSans-Light";
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .emotions {
+    @extend .disturbances;
+    .main-img {
+      width: 75px;
+      position: absolute;
+      top: 51.7%;
+      left: 48.7%;
+      transform: translate(-50%, -50%);
+    }
+    .custom-label {
+      background-color: #3b3c3d;
+      height: 30px;
+      border-radius: 20px;
+      position: relative;
+      padding: 10px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .top-label {
+        background-color: #2f3031;
+        position: absolute;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        top: 0;
+        border-radius: 20px;
+        line-height: 2.5;
+        font-size: 12px;
+        text-align: center;
+        img {
+          height: 30px;
+        }
+      }
+      &.left-side {
+        transform: scaleX(-1);
+        .top-label {
+          transform: scaleX(-1);
+          img {
+            float: right;
+          }
+        }
+        .text {
+          transform: scaleX(-1);
+        }
+      }
+      .text {
+        font-size: 12px;
+      }
+    }
+  }
+  .p-distribution {
+    @extend .emotions;
+    .btn-custom {
+      background-color: #f72585;
+      color: #fff;
+      padding-left: 6px;
+      padding-right: 6px;
+      height: 44px;
+      width: 110px;
+      font-size: 24px;
+      font-family: "OpenSans-Light";
+      position: absolute;
+      right: 0;
+      bottom: 53px;
+      .not-italic {
+        font-size: 12px;
+        margin-top: 0.4rem;
+        margin-left: 5px;
+        text-transform: uppercase;
+      }
+    }
+    .top-line {
+      width: 1px;
+      height: 80%;
+      position: absolute;
+      border-left: 3px dashed #f72585;
+      top: 18px;
+      left: 49.7%;
+      &::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: #f72585;
+        margin-left: -7.5px;
+        border: 2px solid #232424;
+        margin-top: -2px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: #f72585;
+        margin-left: -7.5px;
+        position: absolute;
+        bottom: -2px;
+        border: 2px solid #232424;
+      }
+    }
+  }
+  .recharts-wrapper {
+    margin: auto;
+  }
+  .apexcharts-canvas {
+    margin: auto;
+  }
+  .speedometer {
+    margin: auto;
+    margin-top: 3rem;
+  }
+  .emotion-bottom {
+    margin-top: 25px;
+    .text {
+      h3 {
+        font-size: 27px;
+        font-family: "OpenSans-Light";
+      }
+    }
+    .timer {
+      font-size: 27px;
+      font-family: "OpenSans-Light";
+    }
+    .buttons {
+      button {
+        background-color: #232424;
+        border-radius: 7px;
+        min-height: 30px;
+        height: 30px;
+        img {
+          height: 15px;
+          margin-right: 7px;
+        }
+        & + button {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+.pl-fab-2 {
+  padding-left: 18px !important;
+}
+
+.current-value {
+  display: none;
+}
+
+.wordcloudComponent {
+  display: flex;
+  justify-content: center;
+}
+
+.with-buttons .MuiFab-label > span {
+  margin-right: 10px;
+}

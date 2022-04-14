@@ -1,0 +1,111 @@
+.apexcharts-xaxistooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light {
+    display: none;
+}
+.tooltip {
+    padding: 5px 10px;
+    border-radius: 43px;
+    background-color: #4cc9f0;
+    color: #151616;
+    font-family: "OpenSans-light";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    .name,
+    .number {
+        color: #fff;
+        font-family: "OpenSans-light";
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 43px;
+        background-color: #4361ee;
+    }
+    .number {
+        background-color: transparent;
+        padding: 0 5px;
+        color: #151616;
+    }
+}
+
+.tooltips {
+    text-align: left;
+    padding: 5px 0;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+    border: none;
+    background-color: transparent;
+}
+
+.apexcharts-bar-area {
+    clip-path: inset(0% 18% round 15px);
+}
+
+#waveform-timeline {
+    background-color: #2f3031;
+    border-radius: 0 0 31px 31px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.21);
+    padding: 0 0 10px;
+}
+
+.cursor-wrapper {
+    padding-left: 21px;
+}
+
+.chart-cursor {
+    height: 158px;
+    border: 1px solid #4CC9F0;
+    width: 0;
+    position: relative;
+    transition: left 0.1s linear;
+}
+
+.chart-cursor-2 {
+    border: 1px solid #4CC9F0;
+    height: 160px;
+    width: 0;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: -21px;
+    transition: left 0.1s linear;
+}
+
+.emotions-wrapper, .speed-wrapper {
+    height: 160px;
+}
+
+.speed-x-axis {
+    width: calc(100% + 35px);
+    position: absolute;
+    height: 33px;
+    background-color: #2F3031;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.21%);
+    bottom: 0px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'OpenSans-Light';
+}
+
+.speed-y-axis {
+    position: absolute;
+    background: #2F3031;
+    height: 100%;
+    width: 33px;
+    border-radius: 17px;
+}
+
+.apexcharts-xaxis-annotations line {
+    stroke-width: 3 !important;
+}
+
+.apexcharts-svg{
+    width: 120%;
+}

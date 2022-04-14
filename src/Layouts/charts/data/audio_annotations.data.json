@@ -1,0 +1,88 @@
+{
+    "accident": [
+        {
+            "end": 2.648134485157439,
+            "start": 2.148134485157439,
+            "vocaltype": "accident"
+        },
+        {
+            "end": 5.67267139790915,
+            "start": 5.4405847597151284,
+            "vocaltype": "accident"
+        }
+    ],
+    "inspiration": [
+        {
+            "end": 4.679815998275226,
+            "start": 4.179815998275226,
+            "vocaltype": "inspiration"
+        },
+        {
+            "end": 0.9132693234735177,
+            "start": 0.41326932347351775,
+            "vocaltype": "inspiration"
+        }
+    ],
+    "silence": [
+        {
+            "end": 4.143989274663267,
+            "start": 3.2184798176773004,
+            "vocaltype": "silence"
+        }
+    ],
+    "speaking": [
+        {
+            "end": 0.41326932347351775,
+            "start": 0,
+            "vocaltype": "speaking"
+        },
+        {
+            "end": 2.148134485157439,
+            "start": 0.9132693234735177,
+            "vocaltype": "speaking"
+        },
+        {
+            "end": 3.2184798176773004,
+            "start": 2.648134485157439,
+            "vocaltype": "speaking"
+        },
+        {
+            "end": 4.179815998275226,
+            "start": 4.143989274663267,
+            "vocaltype": "speaking"
+        },
+        {
+            "end": 5.4405847597151284,
+            "start": 4.679815998275226,
+            "vocaltype": "speaking"
+        },
+        {
+            "end": 319.09,
+            "start": 5.67267139790915,
+            "vocaltype": "speaking"
+        }
+    ],
+    "statistics": {
+        "accident": {
+            "rate_per_minute": 0.3760694474913034,
+            "total_num": 2,
+            "total_seconds": 0.7320866381940219
+        },
+        "inspiration": {
+            "rate_per_minute": 0.3760694474913034,
+            "total_num": 2,
+            "total_seconds": 1.0
+        },
+        "silences": {
+            "rate_per_minute": 0.1880347237456517,
+            "total_num": 1,
+            "total_seconds": 0.9255094569859663
+        },
+        "speaking": {
+            "rate_per_minute": 1.1282083424739102,
+            "total_num": 6,
+            "total_seconds": 316.43240390482
+        },
+        "total_duration": 319.09
+    }
+}
